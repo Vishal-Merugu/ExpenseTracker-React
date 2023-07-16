@@ -1,4 +1,5 @@
 import ExpenseItem from "./components/ExpenseItem";
+import Card from "./components/Card";
 
 function App() {
   const expenses = [
@@ -35,6 +36,7 @@ function App() {
   return (
     <div>
       <h1>Let's get started!</h1>
+      <Card className="expenses">
       {expenses.map((expense, index) => {
         return (
           <ExpenseItem
@@ -45,6 +47,7 @@ function App() {
           ></ExpenseItem>
         );
       })}
+      </Card>
     </div>
   );
 }
